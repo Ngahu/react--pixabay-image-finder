@@ -11,13 +11,19 @@ export  class Search extends Component {
         apiUrl:'https://pixabay.com/api/',
         apiKey:'8789577-ac9acb03ab03d52cd026ad8a0',
         images:[]
+    };
+
+    onTextChange = (e) => {
+      this.setState({[e.target.name]: e.target.value})
     }
+
+
   render() {
     return (
       <div>
         <TextField
 
-        name="SearchText"
+        name="searchText"
         value={this.state.searchText}
         onChange={this.onTextChange}
         floatingLabelText = "Search For Images"
@@ -31,7 +37,7 @@ export  class Search extends Component {
           onChange={this.onAmountChange}
         >
           <MenuItem value={5} primaryText="5" />
-          <MenuItem value={10} primaryText="5" />
+          <MenuItem value={10} primaryText="10" />
           <MenuItem value={15} primaryText="15" />
           <MenuItem value={30} primaryText="30" />
           <MenuItem value={50} primaryText="50" />
