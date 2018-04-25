@@ -4,6 +4,8 @@ import './App.css';
 
 import { Navbar } from './components/navbar/Navbar';
 
+import { Search } from './components/search/Search';
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class App extends Component {
@@ -12,6 +14,8 @@ class App extends Component {
       <MuiThemeProvider>
       <div className="App">  
       <Navbar/>
+      <Search/>
+
       
       </div>
        </MuiThemeProvider>
